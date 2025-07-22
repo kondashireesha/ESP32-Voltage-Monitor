@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 | Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C6 | ESP32-H2 | ESP32-S2 | ESP32-S3 |
 | ----------------- | ----- | -------- | -------- | -------- | -------- | -------- | -------- |
 
@@ -59,3 +60,7 @@ I (5194) MQTT_EXAMPLE: MQTT_EVENT_DATA
 TOPIC=/topic/qos0
 DATA=data
 ```
+=======
+# ESP32-Voltage-Monitor
+An ESP32-based voltage monitoring system using ADC and GPIO. It reads analog input voltage using 12-bit ADC resolution and controls an LED based on the voltage level. Implemented using ESP-IDF and FreeRTOS.
+>>>>>>> c3b16f747a09235f4052ea258d6e61787f268238
