@@ -1,0 +1,29 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\esp\siri\voltage_monitoring\build\bootloader\esp-idf\esptool_py && D:\esp\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/esp/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/esp/siri/voltage_monitoring/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+In file included from D:/esp/siri/voltage_monitoring/main/app_main.c:5:
+D:/esp/Espressif/frameworks/esp-idf-v5.2.2/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/esp/siri/voltage_monitoring/main/app_main.c: In function 'app_main':
+D:/esp/siri/voltage_monitoring/main/app_main.c:21:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   21 |     adc1_config_channel_atten(VOLTAGE_PIN, ADC_ATTEN_DB_11); // Allows reading up to ~3.9V
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from D:/esp/Espressif/frameworks/esp-idf-v5.2.2/components/driver/deprecated/driver/adc_types_legacy.h:8,
+                 from D:/esp/Espressif/frameworks/esp-idf-v5.2.2/components/driver/deprecated/driver/adc.h:15:
+D:/esp/Espressif/frameworks/esp-idf-v5.2.2/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Building C object CMakeFiles/mqtt_tcp.elf.dir/project_elf_src_esp32.c.obj
+[6/8] Linking CXX executable mqtt_tcp.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/esp/siri/voltage_monitoring/build/mqtt_tcp.bin
+[8/8] cmd.exe /C "cd /D D:\esp\siri\voltage_monitoring\build\esp-idf\esptool_py && D:\esp\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/esp/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/esp/siri/voltage_monitoring/build/partition_table/partition-table.bin D:/esp/siri/voltage_monitoring/build/mqtt_tcp.bin"
+mqtt_tcp.bin binary size 0x2d480 bytes. Smallest app partition is 0x100000 bytes. 0xd2b80 bytes (82%) free.
